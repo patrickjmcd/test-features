@@ -17,5 +17,5 @@ Feature: Death star
   #sidenote: We are constantly looking for planets to blow up
   Scenario: Blow up planet
     Given   enemy planet within range
-    When    firing giant laser gun
+    When    firing death star
     Then    the enemy planet should be completely destroyed
