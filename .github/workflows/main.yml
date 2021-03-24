@@ -23,12 +23,12 @@ jobs:
     - run: npm install
     - run: npm run features2html:ci
     - uses: MeilCli/slack-upload-file@v1
-        id: message
-        with:
-          slack_token: ${{ secrets.SLACK_TOKEN }}
-          channels: ${{ secrets.SLACK_CHANNELS }}
-          file_path: '/tmp/features.html'
-          file_name: 'features.html'
-          file_type: 'html'
-          initial_comment: 'feature file post by slack-upload-file'
-      - run: 'echo ${{ fromJson(steps.message.outputs.response).file.permalink }}'
+      id: message
+      with:
+        slack_token: ${{ secrets.SLACK_TOKEN }}
+        channels: ${{ secrets.SLACK_CHANNELS }}
+        file_path: '/tmp/features.html'
+        file_name: 'features.html'
+        file_type: 'html'
+        initial_comment: 'feature file post by slack-upload-file'
+    - run: 'echo ${{ fromJson(steps.message.outputs.response).file.permalink }}'
