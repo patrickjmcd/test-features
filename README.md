@@ -16,7 +16,7 @@ My proposed solution to this problem is to generate an HTML file of all the feat
 * Include my `features2html` npm package in your `devDependencies` in your `package.json`
 * Create a script in your `package.json` file that runs the `features2html` command (see this repo's package.json for an example)
 * A slack application with `files.upload` permissions ([see here](https://api.slack.com/authentication/basics) for how to set up the app)
-* Github repository secrets set up for `SLACK_TOKEN` from your bot and `SLACK_CHANNEL`, a 
+* Github repository secrets set up for `SLACK_TOKEN` from your bot and `SLACK_CHANNEL`, a comma-separated-list of channels to post to
 
 ## How it works
 
@@ -66,6 +66,11 @@ This Github action runs on a ubuntu environment:
 5. The outputted HTML file is then uploaded to the specified Slack channel
 6. The action prints out a permalink to the file
 
+## Future Improvements
+
+* Only uploading on a change to a feature file
+* Converting the HTML file to a PDF
+* Multiple folders of feature files
 
 ## References
 
