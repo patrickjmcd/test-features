@@ -1,0 +1,14 @@
+{
+  "name": "test-features",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:patrickjmcd/test-features.git",
+  "author": "Patrick McDonagh <patrickjmcd@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "features2html": "^1.0.2"
+  },
+  "scripts": {
+    "features2html": "./node_modules/.bin/feature2html -i docs/features/ninja-test"
+  }
+}
