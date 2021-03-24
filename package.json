@@ -9,6 +9,6 @@
     "features2html": "^1.0.2"
   },
   "scripts": {
-    "features2html": "./node_modules/.bin/feature2html -i docs/features/ninja-test"
+    "features2html:ci": "./node_modules/.bin/feature2html -i docs/features/ninja-test -o /tmp/features.html"
   }
 }
